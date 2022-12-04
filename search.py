@@ -15,6 +15,10 @@ def g(x: object):
 
 
 def A_star(start: object, end: object, h=zero, G=None, f=f, cost: list = None) -> list[object]:
+    # requirements for the object:
+    # methods:
+    # 1, __eq__()
+    # 2, adjacencies()[return adjacent nodes, and their parent nodes should be given]
 
     # cost=============
     if cost != None:
@@ -26,6 +30,8 @@ def A_star(start: object, end: object, h=zero, G=None, f=f, cost: list = None) -
     para = (G,) if G else ()
 
     while open_list:
+
+        # sort out the node with a min f(x) in open list
         min_cost = inf
         index = -1
         for i in range(len(open_list)):
