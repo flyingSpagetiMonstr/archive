@@ -64,6 +64,3 @@ class Direction(Coord):
 
 directions = [Direction(1, 0), Direction(
     0, 1), Direction(-1, 0), Direction(0, -1)]  # anticlockwise
-
-# directions = [Coord(1, 0), Coord(0, 1), Coord(-1, 0),
-#               Coord(0, -1)]  # anticlockwise
