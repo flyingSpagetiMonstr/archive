@@ -18,9 +18,9 @@ def A_star(start: object, end: object, h=zero, G=None, f=f, cost: list = None) -
     # requirements for the object:
     #   methods:
     #       1, __eq__()
-    #       2, adjacencies()[return adjacent nodes, and their parent nodes should be given]
+    #       2, adjacencies()    [return adjacent nodes, and their parent nodes should be given]
     #   attributes:
-    #       1, self.parent
+    #       1, self.parent      [default None]
 
     # cost=============
     if cost != None:
