@@ -1,3 +1,3 @@
 # Python-modules
 
-Codes that can works as modules
+Codes that can work as modules
