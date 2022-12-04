@@ -65,9 +65,9 @@ def A_star(start: object, end: object, h=zero, G=None, f=f, cost: list = None) -
     return "Failed"
 
 
-def BFS__based_on_A_star(start, end, G=None):
+def BFS_based_on_A_star(start, end, G=None):
     return A_star(start, end, zero, G)
 
 
-def DFS__based_on_A_star(start, end, G=None):
+def DFS_based_on_A_star(start, end, G=None):
     return A_star(start, end, G=G, f=lambda x, end, h: -g(x))
