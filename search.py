@@ -35,13 +35,12 @@ def A_star(start: object, end: object, h=zero, G=None, f=f, cost: list = None) -
 
         # sort out the node with a min f(x) in open list
         min_cost = inf
-        index = -1
-        for i in range(len(open_list)):
-            estimate = f(open_list[i], end, h)
+        to_extend = None
+        for tmp in open_list:
+            estimate = f(tmp, end, h)
             if estimate < min_cost:
                 min_cost = estimate
-                index = i
-        to_extend = open_list[index]
+                to_extend = tmp
 
         for next in to_extend.adjacencies(*para):
             if next in close_list:
@@ -69,7 +68,7 @@ def A_star(start: object, end: object, h=zero, G=None, f=f, cost: list = None) -
                     open_list.pop(i)
                     open_list.append(next)
 
-        open_list.pop(index)
+        open_list.remove(to_extend)
     return "Failed"
 
 
